@@ -15,6 +15,7 @@ export default defineConfig({
       manifest: {
         name: "Too Too",
         short_name: "Too Too",
+        start_url: "/dashboard",
         description: "Local-First to-do application",
         icons: [
           {
