@@ -15,6 +15,15 @@ const indexRoute = new Route({
   getParentRoute: () => rootRoute,
   path: "/",
   component: Index,
+  beforeLoad: ({ router }) => {
+    // check if standalone and forward to dashboard
+    if (isStandalone()) {
+      router.navigate({
+        replace: true,
+        to: "/dashboard",
+      });
+    }
+  },
 });
 
 function Index() {
@@ -46,4 +55,8 @@ declare module "@tanstack/react-router" {
 
 export default function App() {
   return <RouterProvider router={router} />;
+}
+
+function isStandalone() {
+  return window.matchMedia("(display-mode: standalone)").matches;
 }
