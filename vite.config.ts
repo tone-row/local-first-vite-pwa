@@ -14,7 +14,7 @@ export default defineConfig({
       },
       manifest: {
         name: "Too Too",
-        short_name: "TooToo",
+        short_name: "Too Too",
         description: "Local-First to-do application",
         icons: [
           {
