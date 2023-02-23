@@ -37,6 +37,7 @@ export default defineConfig({
         theme_color: "#ffffff",
         background_color: "#ffffff",
         display: "standalone",
+        display_override: ["window-controls-overlay"],
       },
     }),
   ],
